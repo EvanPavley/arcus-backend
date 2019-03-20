@@ -1,5 +1,5 @@
 class Api::V1::UserPalletsController < ApplicationController
-  before_action :find_user_pallet, only: [:show]
+  before_action :find_user_pallet, only: [:show, :destroy]
 
   def index
     @user_pallets = UserPallet.all
@@ -13,6 +13,10 @@ class Api::V1::UserPalletsController < ApplicationController
 
   def show
     render json: @user_pallet, status: :ok
+  end
+
+  def destroy
+    @user_pallet.destroy
   end
 
   private
