@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_132256) do
+ActiveRecord::Schema.define(version: 2019_04_03_205627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_03_19_132256) do
     t.string "five"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "hex_id"
+    t.string "color_relationships"
   end
 
   create_table "user_pallets", force: :cascade do |t|

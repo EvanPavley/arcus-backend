@@ -18,7 +18,7 @@ class Api::V1::PalletsController < ApplicationController
   private
 
   def pallet_params
-    params.require(:pallet).permit(:one, :two, :three, :four, :five)
+    params.require(:pallet).permit(:one, :two, :three, :four, :five, :hex_id)
   end
 
   def find_pallet
