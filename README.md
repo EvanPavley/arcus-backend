@@ -1,24 +1,37 @@
-# README
+<img alt="arcus logo" src="images/Arcuslogo.png" width="348px" height="75px">
+A web-app that enables designers to quickly cycle through generated color palettes and make better design decisions.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Design Ideas
 
-Things you may want to cover:
+<img alt="arcus logo" src="images/Arcus Wheel Gif.gif" width="320px" height="200px">
 
-* Ruby version
+I wanted the UI to be clean and not distract from the colors in the palettes.
 
-* System dependencies
+Color palettes are generated as the user manipulates diffrent sliders. All palettes have 5 diffrent colors. The first color in the pallet is the "key color" AKA the direct output of the sliders. Only 1-3 colors in each palette have a diffrent hue, the other colors only vary in saturation and lightness. The hue variations are based in color theory relationships(analogus, complementary, split complementary).
 
-* Configuration
+<img alt="arcus logo" src="images/ArcusMockupgif.gif" width="320px" height="200px">
 
-* Database creation
+Recoloring mockups on a click is quick and easy solution for testing out diffrent color ideas.
 
-* Database initialization
+All of the mockups are SVGs and the fill color of their parts are changed through state in Arcus's Redux store. I've made five diffrent mockups that embody common graphic design visuals(a website, logo, buisness card, etc.).
 
-* How to run the test suite
+## Bulit With
 
-* Services (job queues, cache servers, search engines, etc.)
+* [React](https://reactjs.org/) - web library used for building the interface
+* [Redux](https://redux.js.org/) - used to declaratively pass and manipulate reusable state to all components
+* [react-router](https://reacttraining.com/react-router/) - for page navigation
+* [react-responsive](https://www.npmjs.com/package/react-responsive) - for media queries / responsive design
+* [JSS](https://cssinjs.org/?v=v10.0.0-alpha.13) - to manipulate CSS attributes based on state
+* [React Circular Color](https://www.npmjs.com/package/react-circular-color) - used this hue slider
+* [Scalable Vector Graphics (SVGs)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) - for mockup images created in [Adobe Illustrator](https://www.adobe.com/products/illustrator.html)
+* [Ruby on Rails](https://rubyonrails.org/) - to save palettes for reuse in different mockups, in a **has_many :through** domain model
+* [postgreSQL](https://www.postgresql.org/) - as the database
+* [bcrypt](https://rubygems.org/gems/bcrypt/versions/3.1.12) - to hash user passwords for real auth
+* [JSON Web Token (JWT)](https://rubygems.org/gems/jwt/versions/1.5.4) - for secure login storage
 
-* Deployment instructions
+### Additional Notes
 
-* ...
+I'm planning on creating a native app and user uploaded mockups in the future.
+Named after the Roman goddess of rainbows.
+
+[Frontend repo](https://github.com/EvanPavley/arcus-frontend)
