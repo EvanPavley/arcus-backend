@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       resources :user_pallets
       resources :pallets
       resources :users
+
+      post "/login", to: "auth#create"
+      get "/auto_login", to: "auth#auto_login"
     end
   end
 end
