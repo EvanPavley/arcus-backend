@@ -7,8 +7,13 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    render json: @user, status: :ok
+    @user = User.create(
+      username: params[:username],
+      password: params[:password],
+      email: params[:email],
+    )
+    jwt = encode_token(@user.id)
+    render json: {user: UserSerializer.new(@user), jwt: jwt}
   end
 
   def show
@@ -16,10 +21,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   private
-
-  def user_params
-    params.require(:user).permit(:username, :email, :password)
-  end
 
   def find_user
     @user = User.find(params[:id])
