@@ -1,9 +1,10 @@
 <img alt="arcus logo" src="images/Arcuslogo.png" width="348px" height="75px">
+
 A web-app that enables designers to quickly cycle through generated color palettes and make better design decisions.
 
-[Backend Hosted on Heroku](https://arcus-color-palette-api.herokuapp.com/api/v1/users)
+[Hosted on Heroku](https://arcus-color-palette.herokuapp.com/PaletteCreator)
 
-[Demo Video](https://arcus-color-palette-api.herokuapp.com/api/v1/users)
+[Demo Video](https://www.youtube.com/watch?v=bGZpIQvYvWg)
 
 ## Design Ideas
 
